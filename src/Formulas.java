@@ -14,11 +14,32 @@ public class Formulas {
 		double vätsketryck = g*fluid*deep;
 		return vätsketryck;
 	}
-	public static double pressureUnderWater(double deep) {
-		double G= 9.82;
-		double pressure = G*997/*vatten densitet*/*deep;
+	public static double pressureUnderWater(double deep) /*4an*/{
+		double pressure = 9.82*997/*vatten densitet*/*deep;
 		return pressure;
 	}
-	
-
+	public static double kineticEnergy(double mass, double velocity)/*5an*/ {
+		double KineticEnergy = mass*Math.pow(velocity, 2)*0.5;
+		return KineticEnergy;
+	}
+	public static double potentialEnergy(double mass, double height) /*6an*/{
+		double PotentialEnergi= mass*height*9.82;
+		return PotentialEnergi;
+	}
+	public static double fallSpeed(double height)/*7an*/{
+		double fallsped = 
+	}
+	public static double delta(double first, double last) {
+		double delta= first-last;
+		return delta;
+		
+	}
+	public static double volumeToMass(FluidTable fluid, double volume) {
+		double VolymToMass= fluid.density*volume;
+		return VolymToMass;
+	}
+	public static double volumeToMass(GasTable gas, double volume) {
+		double VolymToMass= gas.density*volume;
+		return VolymToMass;
+	}
 }
